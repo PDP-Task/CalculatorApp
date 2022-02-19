@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonStyle">
+        <item name="backgroundTint">@color/creamColor</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_weight">1</item>
+
+    </style>
+
+    <style name="EqualStyle">
+        <item name="backgroundTint">@color/purple_500</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="OperatorSytle">
+        <item name="backgroundTint">@color/gray</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+</resources>

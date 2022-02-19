@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:minHeight="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/image_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:background="@android:color/background_dark"
+            android:contentDescription="@string/but"
+            android:onClick="onClickBtn"
+            android:src="@drawable/ic_align_left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/stan"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layoutTwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_layout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvExpression"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_margin="3dp"
+            android:gravity="end|bottom"
+            android:text="@string/zero"
+            android:textColor="@android:color/white"
+            android:textSize="27sp" />
+
+        <TextView
+            android:id="@+id/tvResult"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="3dp"
+            android:gravity="end|bottom"
+            android:text="@string/zero"
+            android:textColor="@color/purple_500"
+            android:textSize="35sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layoutThree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_layoutTwo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="15dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvClear"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/c"
+                android:textColor="@color/purple_500"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvOpen"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/qavsLeft"
+                android:textColor="@color/purple_500"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvClose"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/qavsRight"
+                android:textColor="@color/purple_500"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvDivide"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/div"
+                android:textColor="@color/purple_500"
+                android:textSize="@dimen/textSize" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvOne"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/one"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvTwo"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/two"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvThree"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/three"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvMult"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/mul"
+                android:textColor="@color/purple_500"
+                android:textSize="@dimen/textSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvFour"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/four"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvFive"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/five"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvSix"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/six"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvMin"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/diva"
+                android:textColor="@color/purple_500"
+                android:textSize="@dimen/divaSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvSeven"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/seven"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvEight"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/eight"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvNine"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/nine"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvPlus"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/add"
+                android:textColor="@color/purple_500"
+                android:textSize="@dimen/textSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvDot"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/dot"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvZero"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/zero"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvBack"
+                style="@style/ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/backbase"
+                android:textColor="@color/black"
+                android:textSize="@dimen/divaSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tvEqual"
+                style="@style/EqualStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/equal"
+                android:textColor="@color/white"
+                android:textSize="@dimen/divaSize" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
